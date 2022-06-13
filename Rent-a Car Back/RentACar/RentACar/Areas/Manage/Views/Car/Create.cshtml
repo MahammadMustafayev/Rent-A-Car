@@ -1,0 +1,63 @@
+﻿@model Car
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="CarName">CarName</label>
+                <input asp-for="CarName" class="form-control" placeholder="CarName">
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="Price">Price</label>
+                <input asp-for="Price" class="form-control" placeholder="Price">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label asp-for="CarType">SubTitle</label>
+                <input asp-for="CarType" class="form-control" placeholder="CarType">
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="CarDoor">RedirectUrl</label>
+                <input asp-for="CarDoor" class="form-control" placeholder="CarDoor">
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="Seats">Seats</label>
+                <input asp-for="Seats" class="form-control" placeholder="Seats">
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="LuggageSuit">LuggageSuit</label>
+                <input asp-for="LuggageSuit" class="form-control" placeholder="LuggageSuit">
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="LuggageBaggage">LuggageBaggage</label>
+                <input asp-for="LuggageBaggage" class="form-control" placeholder="LuggageBaggage">
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="Transmission">LuggageBaggage</label>
+                <input asp-for="Transmission" class="form-control" placeholder="Transmission">
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="Airconditioning">Airconditioning</label>
+                <input asp-for="Airconditioning" class="form-control" placeholder="Airconditioning">
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="CarAge">CarAge</label>
+                <input asp-for="CarAge" class="form-control" placeholder="CarAge">
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="Photo"></label>
+                <input type="file" asp-for="Photo" class="form-control" placeholder="Photo">
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+    </form>
+</div>
+
+

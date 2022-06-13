@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+
+}
+.first{
+    height: 40vh;
+    background-image: url(https://www.lamborghinisarasota.com/wp-content/uploads/bslider1.jpg);
+    background-repeat: no-repeat;
+}
+.m-circle{
+    margin:  1% 10%;
+}
+.tit{
+    margin-left: 25%;
+}
+.img{
+    width:564px ;
+    height: 500px;
+}
+.bg-gray{
+    background-color: rgb(216, 216, 216);
+}
+.back{
+    height: 50vh;
+    background-image: url(http://malikhassan.com/html/car-rental/html/images/counter-bg.jpg);
+    background-repeat: no-repeat;
+}
+.comment{
+    width: 952px;
+    height: 583px;
+}
+.comment-inp{
+    width: 75%;
+    height: 7vh;
+    margin:3% auto;
+}

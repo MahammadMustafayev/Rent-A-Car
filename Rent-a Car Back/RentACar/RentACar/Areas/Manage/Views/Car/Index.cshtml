@@ -1,0 +1,61 @@
+﻿@model List<Car>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+    int order = 0;
+}
+
+<div class="container-fluid">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <h1>Authors:</h1>
+        <a asp-action="Create" asp-controller="Car" class="btn btn-primary">Create</a>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Car Name</th>
+                <th scope="col">Car Door</th>
+                <th scope="col">Car Age</th>
+                <th scope="col">Car Type</th>
+                <th scope="col">Price</th>
+                <th scope="col">Airconditioning</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Luggage Baggage</th>
+                <th scope="col">Luggage Suit</th>
+                <th scope="col">Seats </th>
+                <th scope="col">Transmission </th>
+                <th scope="col">Image</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                order++;
+                <tr>
+                    <th scope="row">@order</th>
+                    <td>@item.CarName</td>
+                    <td>@item.CarDoor</td>
+                    <td>@item.CarAge</td>
+                    <td>@item.CarType</td>
+                    <td>@item.Price</td>
+                    <td>@item.Airconditioning</td>
+                    <td>@item.Brand</td>
+                    <td>@item.LuggageBaggage</td>
+                    <td>@item.LuggageSuit</td>
+                    <td>@item.Seats</td>
+                    <td>@item.Transmission</td>
+                    <td><img src="~/image/bg-images/@item.Image" style="max-width:100px" /></td>
+                    <td>
+                        <a asp-action="Edit" asp-controller="Car" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                        <a asp-action="Delete" asp-controller="Car" asp-route-id="@item.Id" class="btn btn-danger btn-sweet-delete">Delete</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+
